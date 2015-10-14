@@ -16,13 +16,13 @@ passw = getpass.getpass ('\nWhat is the password? ')
 for device_hostname in device_split_list:
 
    # TESTING CONNECTIVITY
-   pinging = shlex.split('ping -n 2 ' + device_hostname)
+   ping_cmd = shlex.split('ping -n 2 ' + device_hostname)
    try:
-      output = subprocess.check_output(pinging)
+      output = subprocess.check_output(ping_cmd)
    except subprocess.CalledProcessError , e:
-      print('\nThe IP {0} is *not* reachable'.format(pinging[-1]))
+      print('\nThe IP {0} is *not* reachable'.format(ping_cmd[-1]))
    else:
-      print('\nThe IP {0} is reachable'.format(pinging[-1]))
+      print('\nThe IP {0} is reachable'.format(ping_cmd[-1]))
 
       # LOGGING IN
       try:
