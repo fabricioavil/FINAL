@@ -12,7 +12,7 @@ for each_destination in destinations:
         print("\n" , each_destination , 'is up!\n')
         result += result + 1
     else:
-        print("\n" , each_destination , 'is down!\n')
+        print("\n" , each_destination , "is down!\n")
 
 if result == 0:
     subprocess.check_call("/sbin/shutdown -r now" , shell=True)

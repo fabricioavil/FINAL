@@ -1,3 +1,4 @@
+
 terminal length 0
 show interface description
 show ip interface brief
